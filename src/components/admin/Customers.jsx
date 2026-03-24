@@ -1,0 +1,251 @@
+import React from 'react'
+
+const Customers = () => {
+    const company = [
+  {
+    "id": 1,
+    "name": "Savanna Tech Solutions",
+    "industry": "Information Technology",
+    "email": "info@savannatech.com",
+    "phone": "+254700123456",
+    "city": "Nairobi",
+    "country": "Kenya",
+    "foundedYear": 2015,
+    "employeeCount": 120,
+    "isActive": true
+  },
+  {
+    "id": 2,
+    "name": "BlueWave Logistics",
+    "industry": "Transportation & Logistics",
+    "email": "contact@bluewave.co.ke",
+    "phone": "+254711987654",
+    "city": "Mombasa",
+    "country": "Kenya",
+    "foundedYear": 2010,
+    "employeeCount": 85,
+    "isActive": true
+  },
+  {
+    "id": 3,
+    "name": "GreenHarvest Ltd",
+    "industry": "Agriculture",
+    "email": "support@greenharvest.com",
+    "phone": "+254722445566",
+    "city": "Kisumu",
+    "country": "Kenya",
+    "foundedYear": 2018,
+    "employeeCount": 45,
+    "isActive": false
+  },
+  {
+    "id": 4,
+    "name": "UrbanNest Realty",
+    "industry": "Real Estate",
+    "email": "hello@urbannest.co.ke",
+    "phone": "+254733112233",
+    "city": "Nairobi",
+    "country": "Kenya",
+    "foundedYear": 2012,
+    "employeeCount": 60,
+    "isActive": true
+  },
+  {
+    "id": 5,
+    "name": "Peak Finance Group",
+    "industry": "Financial Services",
+    "email": "info@peakfinance.com",
+    "phone": "+254745667788",
+    "city": "Nakuru",
+    "country": "Kenya",
+    "foundedYear": 2008,
+    "employeeCount": 200,
+    "isActive": true
+  },
+  {
+    "id": 6,
+    "name": "SunGrid Energy",
+    "industry": "Energy",
+    "email": "contact@sungrid.co.ke",
+    "phone": "+254701223344",
+    "city": "Eldoret",
+    "country": "Kenya",
+    "foundedYear": 2016,
+    "employeeCount": 75,
+    "isActive": true
+  },
+  {
+    "id": 7,
+    "name": "FreshBasket Retail",
+    "industry": "Retail",
+    "email": "support@freshbasket.com",
+    "phone": "+254709334455",
+    "city": "Nairobi",
+    "country": "Kenya",
+    "foundedYear": 2019,
+    "employeeCount": 40,
+    "isActive": true
+  },
+  {
+    "id": 8,
+    "name": "AquaPure Water Co.",
+    "industry": "Manufacturing",
+    "email": "info@aquapure.co.ke",
+    "phone": "+254712556677",
+    "city": "Thika",
+    "country": "Kenya",
+    "foundedYear": 2011,
+    "employeeCount": 95,
+    "isActive": false
+  },
+  {
+    "id": 9,
+    "name": "SkyNet Communications",
+    "industry": "Telecommunications",
+    "email": "hello@skynet.co.ke",
+    "phone": "+254722667788",
+    "city": "Nairobi",
+    "country": "Kenya",
+    "foundedYear": 2014,
+    "employeeCount": 150,
+    "isActive": true
+  },
+  {
+    "id": 10,
+    "name": "PrimeBuild Construction",
+    "industry": "Construction",
+    "email": "contact@primebuild.com",
+    "phone": "+254733778899",
+    "city": "Nakuru",
+    "country": "Kenya",
+    "foundedYear": 2005,
+    "employeeCount": 300,
+    "isActive": true
+  },
+  {
+    "id": 11,
+    "name": "MedLife Healthcare",
+    "industry": "Healthcare",
+    "email": "info@medlife.co.ke",
+    "phone": "+254744889900",
+    "city": "Kisumu",
+    "country": "Kenya",
+    "foundedYear": 2013,
+    "employeeCount": 110,
+    "isActive": true
+  },
+  {
+    "id": 12,
+    "name": "EduCore Academy",
+    "industry": "Education",
+    "email": "admin@educore.ac.ke",
+    "phone": "+254755990011",
+    "city": "Nairobi",
+    "country": "Kenya",
+    "foundedYear": 2017,
+    "employeeCount": 35,
+    "isActive": true
+  },
+  {
+    "id": 13,
+    "name": "TravelNest أفريقيا",
+    "industry": "Tourism",
+    "email": "info@travelnest.com",
+    "phone": "+254766101112",
+    "city": "Mombasa",
+    "country": "Kenya",
+    "foundedYear": 2016,
+    "employeeCount": 50,
+    "isActive": false
+  },
+  {
+    "id": 14,
+    "name": "FarmLink Supplies",
+    "industry": "Agriculture",
+    "email": "sales@farmlink.co.ke",
+    "phone": "+254777121314",
+    "city": "Eldoret",
+    "country": "Kenya",
+    "foundedYear": 2009,
+    "employeeCount": 70,
+    "isActive": true
+  },
+  {
+    "id": 15,
+    "name": "SecureNet Systems",
+    "industry": "Cybersecurity",
+    "email": "support@securenet.com",
+    "phone": "+254788131415",
+    "city": "Nairobi",
+    "country": "Kenya",
+    "foundedYear": 2020,
+    "employeeCount": 25,
+    "isActive": true
+  },
+  {
+    "id": 16,
+    "name": "AutoTrack Motors",
+    "industry": "Automotive",
+    "email": "info@autotrack.co.ke",
+    "phone": "+254799141516",
+    "city": "Thika",
+    "country": "Kenya",
+    "foundedYear": 2012,
+    "employeeCount": 90,
+    "isActive": true
+  },
+  {
+    "id": 17,
+    "name": "CloudBase Solutions",
+    "industry": "Software",
+    "email": "contact@cloudbase.io",
+    "phone": "+254700151617",
+    "city": "Nairobi",
+    "country": "Kenya",
+    "foundedYear": 2021,
+    "employeeCount": 20,
+    "isActive": true
+  },
+  {
+    "id": 18,
+    "name": "EcoCycle Innovations",
+    "industry": "Environmental Services",
+    "email": "info@ecocycle.co.ke",
+    "phone": "+254711161718",
+    "city": "Nakuru",
+    "country": "Kenya",
+    "foundedYear": 2018,
+    "employeeCount": 55,
+    "isActive": true
+  },
+  {
+    "id": 19,
+    "name": "Foodies Delight Ltd",
+    "industry": "Food & Beverage",
+    "email": "hello@foodiesdelight.com",
+    "phone": "+254722171819",
+    "city": "Mombasa",
+    "country": "Kenya",
+    "foundedYear": 2011,
+    "employeeCount": 130,
+    "isActive": true
+  },
+  {
+    "id": 20,
+    "name": "NextGen Ventures",
+    "industry": "Venture Capital",
+    "email": "partners@nextgenvc.com",
+    "phone": "+254733181920",
+    "city": "Nairobi",
+    "country": "Kenya",
+    "foundedYear": 2019,
+    "employeeCount": 15,
+    "isActive": true
+  }
+]
+  return (
+    <div></div>
+  )
+}
+
+export default Customers
