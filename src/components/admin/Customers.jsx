@@ -10,6 +10,15 @@ import {
   Table,
 } from "@mui/material";
 
+const headers = [
+  {id: 1, title: 'Name'}, 
+  {id: 2, title: 'Industry'}, 
+  {id: 3, title: 'Email'}, 
+  {id: 4, title: 'Phone'}, 
+  {id: 5, title: 'City'}, 
+  {id: 6, title: 'Country'}
+]
+
 const company = [
   {
     id: 1,
@@ -263,7 +272,26 @@ const Customers = () => {
     setRowsPerPage(+e.target.value)
     setPage(0)
   }
-  return <div></div>;
+  return (
+  <Paper sx={{ width: '100%', overflow: "hidden"}}>
+    <TableContainer sx={{ maxHeight: 440}}>
+      <Table stickyHeader>
+        <TableHead>
+          <TableRow>
+            {headers.map((header) =>(
+              <TableCell
+              key={header.id}
+              style={{ minWidth: 170 }}
+              >
+                {header.title}
+              </TableCell>
+            ))}
+          </TableRow>
+        </TableHead>
+      </Table>
+    </TableContainer>
+  </Paper>
+);
 };
 
 export default Customers;
